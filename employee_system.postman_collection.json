@@ -1,0 +1,987 @@
+{
+  "info": {
+    "_postman_id": "88d0dd4d-ddfb-4020-9587-5d8891f0a320",
+    "name": "employee_system",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46750332",
+    "_collection_link": "https://go.postman.co/collection/46750332-88d0dd4d-ddfb-4020-9587-5d8891f0a320?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "admin login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "admin login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/login/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:06:34 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "580"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NDcyNjM5NCwiaWF0IjoxNzk0NjM5OTk0LCJqdGkiOiI1ZTMzYjRhZTQ4Mzc0MGQxOGExYTZhNzU1ZjUxYTdlOSIsInVzZXJfaWQiOiIxIn0.dehO9j2k6UFuZF66rZVA6AKgLDy6tVMD72SNUzRz3ZM\",\n  \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk0NzI2Mzk0LCJpYXQiOjE3OTQ2Mzk5OTQsImp0aSI6ImNhM2VkZGZhMDJiZjRlYzM5NzU0NDQ3YTkyODdmNTE4IiwidXNlcl9pZCI6IjEifQ.Nlrvjd9wqevt22H8bo_mKkmx5HyQxY5hCQqR-1WaWo0\",\n  \"user\": {\n    \"name\": \"inderjeetsingh0521@gmail.com\",\n    \"role\": \"admin\"\n  },\n  \"message\": \"Login successful\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/dashboard/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{admin_jwt_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/dashboard/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "dashboard",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:8000/api/dashboard/",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/dashboard/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "dashboard",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:05:20 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1258"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"message\": \"Dashboard data fetched successfully.\",\n  \"dashboard_data\": {\n    \"total_employees\": 9,\n    \"total_departments\": 2,\n    \"recent_employees\": [\n      {\n        \"id\": 10,\n        \"user\": {\n          \"id\": 11,\n          \"name\": \"Karthik\",\n          \"first_name\": \"Karthik\",\n          \"last_name\": \"\",\n          \"email\": \"karthik@yopmail.com\",\n          \"phone_number\": \"+919876543278\"\n        },\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\",\n        \"profile_pic\": null,\n        \"employee_id\": \"EMP-0010\",\n        \"is_deleted\": false,\n        \"department\": 2\n      },\n      {\n        \"id\": 9,\n        \"user\": null,\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\",\n        \"profile_pic\": null,\n        \"employee_id\": null,\n        \"is_deleted\": false,\n        \"department\": 2\n      },\n      {\n        \"id\": 8,\n        \"user\": null,\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\",\n        \"profile_pic\": null,\n        \"employee_id\": \"EMP-0008\",\n        \"is_deleted\": false,\n        \"department\": 1\n      },\n      {\n        \"id\": 6,\n        \"user\": null,\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\",\n        \"profile_pic\": null,\n        \"employee_id\": \"EMP-0006\",\n        \"is_deleted\": false,\n        \"department\": 2\n      },\n      {\n        \"id\": 5,\n        \"user\": null,\n        \"designation\": \"SDE-1\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-16\",\n        \"profile_pic\": null,\n        \"employee_id\": \"EMP-0005\",\n        \"is_deleted\": false,\n        \"department\": 2\n      }\n    ],\n    \"department_statistics\": [\n      {\n        \"id\": 1,\n        \"name\": \"HR\",\n        \"employee_count\": 4\n      },\n      {\n        \"id\": 2,\n        \"name\": \"IT\",\n        \"employee_count\": 5\n      }\n    ]\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/departments/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{admin_jwt_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/departments/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "departments",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:8000/api/departments/",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/departments/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "departments",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:05:56 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "78"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"department_data\": [\n    {\n      \"id\": 1,\n      \"name\": \"HR\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"IT\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/employees/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{admin_jwt_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/employees/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:8000/api/employees/",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/employees/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "employees",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:06:18 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, POST, HEAD, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1669"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"count\": 9,\n  \"next\": null,\n  \"previous\": null,\n  \"results\": {\n    \"success\": true,\n    \"department_data\": [\n      \"HR\",\n      \"IT\"\n    ],\n    \"employee_data\": [\n      {\n        \"id\": 1,\n        \"full_name\": \"abhishek kumar\",\n        \"email\": \"abhishek@yopmail.com\",\n        \"employee_id\": \"EMP-0001\",\n        \"department\": \"HR\",\n        \"designation\": \"executive hr\",\n        \"salary\": \"50000.00\",\n        \"joining_date\": \"2026-11-12\"\n      },\n      {\n        \"id\": 2,\n        \"full_name\": \"harmeet singh\",\n        \"email\": \"harmeet@yopmail.com\",\n        \"employee_id\": \"EMP-0002\",\n        \"department\": \"HR\",\n        \"designation\": \"junior hr\",\n        \"salary\": \"35000.00\",\n        \"joining_date\": \"2026-11-12\"\n      },\n      {\n        \"id\": 3,\n        \"full_name\": \"nitin kumar\",\n        \"email\": \"nitin@yopmail.com\",\n        \"employee_id\": \"EMP-0003\",\n        \"department\": \"IT\",\n        \"designation\": \"web developer\",\n        \"salary\": \"42000.00\",\n        \"joining_date\": \"2026-11-12\"\n      },\n      {\n        \"id\": 4,\n        \"full_name\": \"yogi adityanath\",\n        \"email\": \"yogibaba@gmail.com\",\n        \"employee_id\": \"EMP-0004\",\n        \"department\": \"HR\",\n        \"designation\": \"junior hr\",\n        \"salary\": \"45000.00\",\n        \"joining_date\": \"2026-11-14\"\n      },\n      {\n        \"id\": 5,\n        \"full_name\": \"\",\n        \"email\": null,\n        \"employee_id\": \"EMP-0005\",\n        \"department\": \"IT\",\n        \"designation\": \"SDE-1\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-16\"\n      },\n      {\n        \"id\": 6,\n        \"full_name\": \"\",\n        \"email\": null,\n        \"employee_id\": \"EMP-0006\",\n        \"department\": \"IT\",\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\"\n      },\n      {\n        \"id\": 8,\n        \"full_name\": \"\",\n        \"email\": null,\n        \"employee_id\": \"EMP-0008\",\n        \"department\": \"HR\",\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\"\n      },\n      {\n        \"id\": 9,\n        \"full_name\": \"\",\n        \"email\": null,\n        \"employee_id\": null,\n        \"department\": \"IT\",\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\"\n      },\n      {\n        \"id\": 10,\n        \"full_name\": \"Karthik\",\n        \"email\": \"karthik@yopmail.com\",\n        \"employee_id\": \"EMP-0010\",\n        \"department\": \"IT\",\n        \"designation\": \"Python developer\",\n        \"salary\": \"25000.00\",\n        \"joining_date\": \"2026-11-21\"\n      }\n    ]\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/employees/1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{admin_jwt_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/employees/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/employees/export/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{admin_jwt_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/employees/export/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees",
+            "export",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "employee_login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "abhishek@yopmail.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin@123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "employee_login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "abhishek@yopmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "admin@123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/login/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:07:29 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "575"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NDcyNjQ0OSwiaWF0IjoxNzk0NjQwMDQ5LCJqdGkiOiJlM2IyNzQ5NGRkNmM0OTBjYmUwN2NkMWZhODAxOTc1YiIsInVzZXJfaWQiOiIyIn0.evCXk2etjyMConULOydmJnWnbxKgGjnUlC45MMdpW5U\",\n  \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk0NzI2NDQ5LCJpYXQiOjE3OTQ2NDAwNDksImp0aSI6IjQ2N2QxOTU5YmJkMDQ1OGVhNDY4NzdmYmZhMTU3MzE2IiwidXNlcl9pZCI6IjIifQ.9DKFerobgEv0OQrBY_H4-tOp785j6SOddc66Nbh60CQ\",\n  \"user\": {\n    \"name\": \"abhishek@yopmail.com\",\n    \"role\": \"employee\"\n  },\n  \"message\": \"Login successful\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/employee/profile/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{employee_jwt}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/employee/profile/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employee",
+            "profile",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:8000/api/employee/profile/",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/employee/profile/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "employee",
+                "profile",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:07:40 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "337"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"profile\": {\n    \"full_name\": \"abhishek kumar\",\n    \"email\": \"abhishek@yopmail.com\",\n    \"phone_number\": \"+919876543210\",\n    \"employee_id\": \"EMP-0001\",\n    \"department\": \"HR\",\n    \"designation\": \"executive hr\",\n    \"salary\": \"50000.00\",\n    \"joining_date\": \"2026-11-12\",\n    \"profile_pic\": \"http://127.0.0.1:8000/media/profile_pics/f287aef9-017b-4195-a632-d28ae88540cc.png\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/employee/profile/",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{employee_jwt}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/employee/profile/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employee",
+            "profile",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:8000/api/employee/profile/",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/employee/profile/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "employee",
+                "profile",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 14 Nov 2026 07:07:50 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.14.4"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, origin"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "337"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"profile\": {\n    \"full_name\": \"abhishek kumar\",\n    \"email\": \"abhishek@yopmail.com\",\n    \"phone_number\": \"+919876543210\",\n    \"employee_id\": \"EMP-0001\",\n    \"department\": \"HR\",\n    \"designation\": \"executive hr\",\n    \"salary\": \"50000.00\",\n    \"joining_date\": \"2026-11-12\",\n    \"profile_pic\": \"http://127.0.0.1:8000/media/profile_pics/f287aef9-017b-4195-a632-d28ae88540cc.png\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "exec": [
+          "const admin_jwt_token = pm.environment.get(\"admin_jwt_token\");\r",
+          "console.log(\"JWT Token:\", admin_jwt_token);\r",
+          "const employee_jwt = pm.environment.get(\"employee_jwt\");\r",
+          "console.log(\"JWT Employee:\", employee_jwt);"
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "employee_jwt",
+      "value": ""
+    },
+    {
+      "key": "admin_jwt_token",
+      "value": "",
+      "disabled": true
+    }
+  ]
+}
